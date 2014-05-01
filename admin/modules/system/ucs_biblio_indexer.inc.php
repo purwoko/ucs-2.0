@@ -112,7 +112,7 @@ class ucs_biblio_indexer
 		$data['publish_place'] = $this->obj_db->escape_string($rb_id['publish_place']);
 		$data['isbn_issn'] = $this->obj_db->escape_string($rb_id['isbn_issn']);
 		$data['language'] = $this->obj_db->escape_string($rb_id['language']);
-		$data['year'] = $rb_id['publish_year'];
+		$data['publish_year'] = $rb_id['publish_year'];
 		$data['classification'] = $this->obj_db->escape_string($rb_id['classification']);
 		$data['spec_detail_info'] = $this->obj_db->escape_string($rb_id['spec_detail_info']);
 		$data['call_number'] = $this->obj_db->escape_string($rb_id['call_number']);
@@ -137,7 +137,7 @@ class ucs_biblio_indexer
 			$data['notes'] = trim($this->obj_db->escape_string(strip_tags($rb_id['notes'], '<br><p><div><span><i><em><strong><b><code>')));
 		}
 		if ($rb_id['series_title'] != '') {
-			$data['series'] = $this->obj_db->escape_string($rb_id['series_title']);
+			$data['series_title'] = $this->obj_db->escape_string($rb_id['series_title']);
 		}
 
 		/* author  */
